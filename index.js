@@ -49,7 +49,7 @@ function copy(array){
   return [...array];
 }    
 
-console.log(copy(originalFlavors));
+// console.log(copy(originalFlavors));
 
 
 
@@ -73,7 +73,7 @@ function is31Flavors(array){
  }
 }
 
-console.log(is31Flavors(originalFlavors));
+// console.log(is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -93,7 +93,7 @@ array.unshift(string);
 return array
 }
 
-console.log(addFlavor(originalFlavors, "Rainbow Sherbert"));
+// console.log(addFlavor(originalFlavors, "Rainbow Sherbert"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -112,7 +112,7 @@ function removeLastFlavor(array){
  return array;
 }
 
-console.log(removeLastFlavor(originalFlavors));
+// console.log(removeLastFlavor(originalFlavors));
 
 
 
@@ -131,7 +131,7 @@ function getFlavorByIndex(array,number){
   return array[number];
 }
 
-console.log(getFlavorByIndex(originalFlavors,0));
+// console.log(getFlavorByIndex(originalFlavors,0));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -158,7 +158,7 @@ function removeFlavorByName(array,string){
   return array;
 }
 
-console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
+// console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
 
 
 
@@ -182,9 +182,17 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array, string){
+  const filteredArray = [];
+  for (let i = 0; i < array.length; i++){
+    if (array[i].includes(string)){
+      filteredArray.push(array[i]);
+    }
+  }
+  return filteredArray;
 }
+
+console.log(filterByWord(originalFlavors, "Sherbet"));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
